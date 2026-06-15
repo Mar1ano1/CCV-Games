@@ -1,0 +1,17 @@
+-dontusemixedcaseclassnames
+-verbose
+-keepattributes SourceFile,LineNumberTable
+-renamesourcefileattribute SourceFile
+-keep public class * { public protected *; }
+-keepclassmembers enum * { public static **[] values(); public static ** valueOf(java.lang.String); }
+-keep class * implements android.os.Parcelable { public static final android.os.Parcelable$Creator *; }
+-keep class * extends androidx.room.RoomDatabase
+-keep @androidx.room.Entity class *
+-keep @androidx.room.Dao interface *
+-keepclassmembers class ** { *** Companion; }
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.stream.** { *; }
+-keep class com.google.gson.** { *; }
+-keepclassmembers,allowobfuscation class * { @com.google.gson.annotations.SerializedName <fields>; }
